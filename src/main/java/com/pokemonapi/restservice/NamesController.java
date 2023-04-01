@@ -13,14 +13,13 @@ import java.util.List;
 @RestController
 public class NamesController {
 
-    // WHen I hit this URL I want more than just the names, I want them already filtered
+    // When I hit this URL I want more than just the names, I want them already filtered
     // out
     @GetMapping("/names")
     public List<Object> getNames() {
 
         String url = "https://pokeapi.co/api/v1/pokemon?limit=1279";
         RestTemplate restTemplate = new RestTemplate();
-
         Object names = restTemplate.getForObject(url, Object.class);
 
 

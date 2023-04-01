@@ -1,6 +1,5 @@
 package com.pokemonapi;
 import com.pokemonapi.events.applicationStart;
-import com.pokemonapi.events.applicationStart;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,7 +8,6 @@ public abstract class PokemonApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PokemonApiApplication.class, args);
-		applicationStart start = new applicationStart();
 		new applicationStart.ApplicationStartup();
 	}
 
