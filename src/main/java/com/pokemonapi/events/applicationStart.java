@@ -10,6 +10,7 @@ public class applicationStart {
         @Override public void onApplicationEvent(final ApplicationReadyEvent event) {
 
                 new fetchUtils().getNames();
+                new fetchUtils().getEvolutionChain();
             }
     }
 }
