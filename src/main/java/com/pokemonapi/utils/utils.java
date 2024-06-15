@@ -22,11 +22,15 @@ public class utils {
             }
         }
         entryName.setResults(nameList);
+        System.out.print(nameList);
     }
 
     public static void searchEvolutionChain(Object data, String name){
        System.out.println(data);
+    }
 
+    public static getSinglePokemonData(String name){
+        ObjectMapper mapper = new ObjectMapper();
 
     }
 }

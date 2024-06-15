@@ -9,8 +9,7 @@ public class applicationStart {
     @Component public static class ApplicationStartup implements ApplicationListener < ApplicationReadyEvent > {
         @Override public void onApplicationEvent(final ApplicationReadyEvent event) {
 
-                new fetchUtils().getNames();
-                new fetchUtils().getEvolutionChain();
+                new fetchUtils().getNames();;
             }
     }
 }
