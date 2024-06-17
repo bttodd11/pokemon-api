@@ -29,8 +29,4 @@ public class utils {
        System.out.println(data);
     }
 
-    public static getSinglePokemonData(String name){
-        ObjectMapper mapper = new ObjectMapper();
-
-    }
 }

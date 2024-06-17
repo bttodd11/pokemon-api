@@ -4,14 +4,17 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
-
+import org.springframework.web.bind.annotation.GetMapping;
 import static com.pokemonapi.utils.utils.searchEvolutionChain;
 import static com.pokemonapi.utils.utils.stripNameJson;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
+@RestController
 public class fetchUtils {
 
     String url = "https://pokeapi.co/api/v2/";
-    String singlePokemon = url + "/characteristic/";
+    String singlePokemon = url + "/pokemon/";
     String allNames = url + "pokemon?limit=151&offset=0";
     String evolutionChain = url + "evolution-chain/?limit=78";
     String moves = url + "moves/";
@@ -37,11 +40,12 @@ public class fetchUtils {
         System.out.print(chain);
         return chain;
     }
-
-    public Object getSinglePokemonData(String name){
+    @GetMapping("/getSinglePokemon")
+    public Object getSinglePokemonData(@RequestParam(value = "name") String name){
         RestTemplate restTemplate = new RestTemplate();
         Object pokemon = restTemplate.getForObject(singlePokemon + name + "/", Object.class);
-
+        System.out.print(pokemon);
+        return pokemon;
     }
 
 }
