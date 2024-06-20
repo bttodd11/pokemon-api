@@ -6,16 +6,15 @@ import java.util.ArrayList;
 
 public class Entry {
 
+    public static String name;
+    private static Object results;
 
-    private static ArrayList results;
 
-
-    public ArrayList getResults() {
-
+    public Object getNameAndId() {
         return results = results;
     }
 
-    public void setResults(ArrayList results) {
+    public void setResults(Object results) {
         this.results = results;
     }
 }
